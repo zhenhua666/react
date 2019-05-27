@@ -1,7 +1,22 @@
 .input{
     width: 200px;
     height: 30px;
+    text-align: center;
     border-radius: 5px;
     border: 1px solid bisque;
-    box-shadow: 0 0 3px skyblue
+    box-shadow: 0 0 3px skyblue;
+}
+li{
+    list-style: none;
+    line-height: 30px;
+}
+button{
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px skyblue;
+    border:none;
+    background-color: deepskyblue;
+    color: #fff;    
 }

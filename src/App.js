@@ -6,7 +6,7 @@ class App extends Component{
     constructor(props){
         super(props);
         this.state = {
-            inputValue:'心中填不满的缘是你',
+            inputValue:'心中填不满的缘,是你',
             list:['我被爱判处终身孤寂','不还手，不放手','笔下画不完的圆']
         }    
     }
@@ -17,7 +17,7 @@ class App extends Component{
         return(
             <Fragment>
                 
-                    <label htmlFor="hua">添加服务:</label>
+                    <label htmlFor="hua">添加服务 : </label>
                     
                     <input id="hua" className="input" value={this.state.inputValue} onChange={this.inputChange.bind(this)}/>
 
@@ -27,7 +27,13 @@ class App extends Component{
                 {
                     this.state.list.map((item,index)=>{
                         return (
-                                <SisterItem inputValue = {item} key={index} onClick={this.deleted.bind(this,index)}/>
+                                //<SisterItem inputValue = {item} key={index} onClick={this.deleted.bind(this,index)}/>
+                                <SisterItem 
+                                content={item}
+                                key={index}
+                                index={index}
+                                deleteItem={this.deleteItem.bind(this)}
+                                />
                         ) 
                     })
                 }
@@ -47,7 +53,7 @@ class App extends Component{
             inputValue:'',
         })
     }
-    deleted(index){
+    deleteItem(index){
         console.log(index)
         let list = this.state.list
         list.splice(index,1)
