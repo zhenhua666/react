@@ -185,3 +185,20 @@
     最后，git push不会推送标签（tag），除非使用--tags选项。
 
     $ git push origin --tags
+
+## React
+
+### Refs
+    Refs提供了一种方式，允许我们访问DOM节点或在render方法中创建的React元素
+    在典型的React数据流中，props是父组件与子组件，要修改一个子组件，要使用新的props来重新渲染它
+
+    使用refs
+    管理焦点，文本选择或媒体播放
+    触发强制动画
+    集成第三方DOM库
+    避免使用refs来做任何可以通过声明式实现来完成的事情。
+    举个例子，避免在Dailog组件里暴露open()和close()方法，最好传递isOpen属性。
+
+    React.createRef()
+
+    

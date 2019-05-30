@@ -20,3 +20,93 @@ button{
     background-color: deepskyblue;
     color: #fff;    
 }
+
+div{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#container{
+    width: 100%;
+    height: 100%;
+}
+#content{
+    background-color: blue;
+}
+#footer{
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+.footer-fixed{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+/* 
+  let height = document.getElementById('containder').clientHeight - document.getElementById('content').clientHight;
+  if(height > 100){
+            document.getElementById('footer').classList.add('footer-fixed')
+  };
+*/
+
+div{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#container{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#content{
+    color: blue;
+}
+#footer{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+div{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column
+}
+#content{
+    background-color: blue;
+}
+#footer{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    margin-top: auto;
+}
