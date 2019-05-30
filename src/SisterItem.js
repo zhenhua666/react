@@ -1,5 +1,5 @@
 import React, { Component,Fragment } from 'react';
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 class SisterItem extends Component {
         constructor(props) {
@@ -10,7 +10,7 @@ class SisterItem extends Component {
         return ( 
             <Fragment>
             <li onClick={this.handleClick}>
-                {this.props.avname}--{this.props.content}
+                {this.props.avname}{this.props.content}
             </li> 
             </Fragment>
         );
@@ -21,10 +21,10 @@ class SisterItem extends Component {
 }
 
 SisterItem.propTypes = {
-    content:propTypes.string,
-    deleteItem:propTypes.func,
-    index:propTypes.number,
-    avname:propTypes.string.isRequired
+    content:PropTypes.string,
+    deleteItem:PropTypes.func,
+    index:PropTypes.number,
+    avname:PropTypes.string.isRequired
 }
 
 SisterItem.defaultProps={

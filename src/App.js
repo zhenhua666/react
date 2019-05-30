@@ -4,14 +4,15 @@ import './App.css'
 
 class App extends Component{
     constructor(props){
-        super(props);
+        super(props)
         this.state = {
-            inputValue:'心中填不满的缘,是你',
-            list:['我被爱判处终身孤寂','不还手，不放手','笔下画不完的圆']
-        }    
+            inputValue:'react-sage',
+            list:['react','react-router','redux','react-redux']
+        }
+        this.inputChange = this.inputChange.bind(this)
+        this.add = this.add.bind(this)
+        this.deleteItem = this.deleteItem.bind(this)
     }
-
-
 
     render(){
         return(
@@ -19,9 +20,9 @@ class App extends Component{
                 
                     <label htmlFor="hua">添加服务 : </label>
                     
-                    <input id="hua" className="input" value={this.state.inputValue} onChange={this.inputChange.bind(this)}/>
+                    <input id="hua" className="input" value={this.state.inputValue} onChange={this.inputChange}/>
 
-                    <button onClick={this.add.bind(this)}>增加服务</button>
+                    <button onClick={this.add}>增加服务</button>
                 
                 <ul>
                 {
@@ -32,7 +33,9 @@ class App extends Component{
                                 content={item}
                                 key={index}
                                 index={index}
-                                deleteItem={this.deleteItem.bind(this)}
+                                deleteItem={this.deleteItem}
+                                dangerouslySetInnerHTML = {{ __html: item }}
+                                // avname = '松岛枫'
                                 />
                         ) 
                     })
@@ -41,7 +44,6 @@ class App extends Component{
             </Fragment>    
         )
     }
-
     inputChange(e){
         this.setState({
             inputValue:e.target.value

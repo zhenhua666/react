@@ -201,4 +201,8 @@
 
     React.createRef()
 
-    
+##  A fresh start
+    Goodbye to all games on May 30.Exercise every day to build your belly into a four-pack.
+    Start using the word chopper again.It's nice to waste time,and now I'm starting to look at
+    development on the subway.To little to think of the brain to develop inertia,to change to often 
+    think and review today's practice.
